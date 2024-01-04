@@ -128,21 +128,29 @@ document.addEventListener("DOMContentLoaded", function () {
     function updateTaskLists(task, isChecked) {
         const tasksContainerInProgress = document.getElementById("tasksContainerInProgress");
         const tasksContainerDone = document.getElementById("tasksContainerDone");
-
+    
         if (isChecked) {
             tasksContainerDone.appendChild(task);
         } else {
             tasksContainerInProgress.appendChild(task);
         }
-
+    
         updateTaskCounts();
-
-        localStorage.setItem("tasks", JSON.stringify(allTasks));
+    
+        // Update the completed status in allTasks array based on checkbox state
+        const index = Array.from(task.parentNode.children).indexOf(task);
+        if (index !== -1) {
+            allTasks[index].completed = isChecked;
+            localStorage.setItem("tasks", JSON.stringify(allTasks));
+        }
     }
+    
 
     function updateTaskCounts() {
         updateSectionTaskCount("tasksContainerToDo", "totalTasksToDo");
         updateSectionTaskCount("tasksContainerInProgress", "totalTasksInProgress");
+        updateSectionTaskCount("tasksContainerDone", "totalTaskCount");
+        updateDoneTaskCount();
     }
 
     function updateSectionTaskCount(containerId, totalId) {
@@ -153,6 +161,16 @@ document.addEventListener("DOMContentLoaded", function () {
             totalTasks.textContent = totalTaskCount;
         }
     }
+
+    function updateDoneTaskCount() {
+        const totalDoneTasks = document.getElementById("totalTasksDone");
+
+        if (totalDoneTasks) {
+            const doneTaskCount = document.querySelectorAll("#tasksContainerDone .item").length;
+            totalDoneTasks.textContent = doneTaskCount;
+        }
+    }
+
     
 
     function filterTasksByPriority() {

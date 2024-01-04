@@ -155,6 +155,15 @@ body{
 
 }
 
+#totalTasksToDo,#totalTasksDone{
+    display: inline-block;
+    background: #333333;
+    width: 1.5rem;
+    height: 1.3rem;
+    border-radius: 50%;
+    text-align: center;
+}
+
 
 /* Priority Filter Dropdown */
 #priorityFilter {
