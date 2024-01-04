@@ -218,6 +218,72 @@ select.open {
 
 
 
+
+
+
+
+
+
+/* Add these styles to your existing CSS */
+
+/* Common styles for tasks */
+.item {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    margin: 1rem;
+    background-color: #333333;
+    border-radius: 1rem;
+    box-sizing: border-box;
+}
+
+/* Checkbox styles */
+.item input[type="checkbox"] {
+    margin-right: 1rem;
+}
+
+/* Text styles */
+.item div {
+    flex-grow: 1;
+    padding: 0.5rem;
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+/* Button styles */
+.item button {
+    margin-left: 1rem;
+    padding: 0.5rem;
+    background-color: #1E6F9F;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+/* Priority label styles */
+.item div:last-child {
+    margin-left: auto;
+    padding: 0.5rem;
+}
+
+/* Priority color styles */
+.high {
+    border-left: 4px solid red;
+}
+
+.medium {
+    border-left: 4px solid yellow;
+}
+
+.low {
+    border-left: 4px solid green;
+}
+
+
+
+
 /* Media Queries */
 
 /* Small devices (phones) */
