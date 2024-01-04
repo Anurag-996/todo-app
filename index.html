@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-content">
+        <span>
+          <img src="./res/rocket.png" alt="" />
+        </span>
+        <span class="text-blue">to</span>
+        <span class="text-purple">do</span>
+      </div>
+    </nav>
+
+    <header class="todo-add">
+      <div class="add-task">
+        <input type="date" id="taskDate" />
+        <!-- Add date input -->
+        <input
+          type="text"
+          placeholder="Enter Your To-do List Task"
+          id="taskInput"
+        />
+        <button class="add-btn" id="add-btn">
+          <span>Add</span>
+          <span>+</span>
+        </button>
+        <select id="prioritySelect">
+          <option value="High">High</option>
+          <option value="Medium">Medium</option>
+          <option value="Low">Low</option>
+        </select>
+
+        <!-- ... (unchanged code) ... -->
+
+        <select id="priorityFilter">
+          <option value="All">All Priorities</option>
+          <option value="High">High Priority</option>
+          <option value="Medium">Medium Priority</option>
+          <option value="Low">Low Priority</option>
+        </select>
+      </div>
+      <!-- ... (unchanged code) ... -->
+    </header>
+
+    <!-- ... (unchanged code) ... -->
+
+    <main class="main-content">
+      <!-- Task Lists with Heading, Count, and Container -->
+      <section class="list-content">
+        <div class="heading">
+          <p class="heading-left">
+            To-do-list <span id="totalTasksToDo"></span>
+          </p>
+        </div>
+        <div id="tasksContainerToDo" class="itemContainer">
+          <!-- Task items will be added dynamically here for To-Do tasks -->
+        </div>
+      </section>
+
+      <section class="list-content">
+        <div class="heading">
+          <p class="heading-left">Done <span id="totalTasksDone"></span></p>
+        </div>
+        <div id="tasksContainerDone" class="itemContainer">
+          <!-- Task items will be added dynamically here for Done tasks -->
+        </div>
+      </section>
+    </main>
+
+    <!-- ... (unchanged code) ... -->
+
+    <script src="./script.js"></script>
+  </body>
+</html>

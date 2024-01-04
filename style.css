@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ruda:wght@400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+.navbar {
+    width: 100%;
+    height: 160px;
+    background: #0D0D0D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+}
+
+.nav-content {
+    display: flex;
+    align-items: center;
+}
+
+
+.nav-content > .text-blue,
+.nav-content > .text-purple {
+    color: #4EA8DE;
+    font-weight: 900;
+    font-size: 3rem;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+}
+
+.nav-content > .text-blue{
+    color: #5E60CE;
+}
+
+.nav-content img {
+    height: 3rem;
+    margin-right: 10px; /* Add margin for spacing between text and image */
+}
+
+
+.todo-add input::placeholder{
+    color: #808080;
+    font-size: 0.95rem;
+    opacity: 0.5;
+}
+.todo-add input:focus{
+    outline: none;
+}
+
+.todo-add input{
+    padding: 0 1.3rem;
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+body{
+    background-color: #262626;
+}
+
+.add-task{
+    width: 90%;
+    position: fixed;
+    top: 160px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-task > input{
+    height: 50px;
+    background: #333333;
+    border-radius: 0.5rem;
+    border: none;
+}
+
+.add-task>input:nth-child(2){
+    width: 45%;
+    margin-left: 6px;
+}
+
+.add-task>input:nth-child(1){
+    width: 13%;
+}
+
+
+
+.add-btn{
+    height: 50px;
+    width: 90px;
+    margin-left: 0.5rem;
+    background: #1E6F9F;
+    color: white;
+    border-radius: 0.5rem;
+    border: none;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+}
+
+.add-btn > span:nth-child(2){
+    display: inline-block;
+    margin-left: 6px;
+    border: 3px solid white;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    text-align: center;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.add-btn > span:nth-child(2):hover{
+    cursor: pointer;
+}
+
+.main-content{
+    margin-top: 160px;
+}
+
+.list-content{
+    height: auto;
+    color: #ffffff;
+    width: 60%;
+    margin: auto;
+    margin-top: 200px;
+}
+
+.heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.item div{
+    padding: .2rem;
+}
+
+.item{
+    display: flex;
+    padding: 2rem;
+    margin: 1rem;
+    background-color: #333333;
+    border-radius: 1rem;
+    box-sizing: border-box;
+
+}
+
+
+/* Priority Filter Dropdown */
+#priorityFilter {
+    height: 50px;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+/* Priority Select Dropdown */
+#prioritySelect {
+    height: 50px;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0 6px;
+    font-weight: 700;
+    font-size: 1.1em;
+}
+
+/* Styling the options */
+select option {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+/* Styling for hover effect on options */
+select option:hover {
+    background-color: #555555;
+}
+
+/* Styling for the focus state */
+select:focus {
+    outline: none;
+    border-color: #4EA8DE; /* Change the border color on focus */
+    box-shadow: 0 0 5px rgba(78, 168, 222, 0.5); /* Add a subtle box shadow on focus */
+}
+
+/* Styling for the open state */
+select:active,
+select.open {
+    border-color: #4EA8DE; /* Change the border color on open/active state */
+    box-shadow: 0 0 5px rgba(78, 168, 222, 0.5); /* Add a subtle box shadow on open/active state */
+}
+
+
+
+
+/* Media Queries */
+
+/* Small devices (phones) */
+@media only screen and (max-width: 600px) {
+    .list-content {
+        width: 90%; /* Adjust the width for small screens */
+    }
+    #priorityFilter,
+    #prioritySelect {
+        width: 40%; /* Adjust the width for small screens */
+    }
+}
+
+/* Medium devices (tablets) */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+    .list-content {
+        width: 80%; /* Adjust the width for medium screens */
+    }
+    #priorityFilter,
+    #prioritySelect {
+        width: 60%; /* Adjust the width for medium screens */
+    }
+}
+
+/* Large devices (desktops) */
+@media only screen and (min-width: 769px) {
+    .list-content {
+        width: 60%; /* Keep the original width for large screens */
+    }
+    #priorityFilter,
+    #prioritySelect {
+        width: auto; /* Keep the original width for large screens */
+    }
+}
