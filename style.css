@@ -39,7 +39,7 @@
 
 .nav-content img {
     height: 3rem;
-    margin-right: 10px; /* Add margin for spacing between text and image */
+    margin-right: 10px;
 }
 
 
@@ -195,15 +195,15 @@ select option:hover {
 /* Styling for the focus state */
 select:focus {
     outline: none;
-    border-color: #4EA8DE; /* Change the border color on focus */
-    box-shadow: 0 0 5px rgba(78, 168, 222, 0.5); /* Add a subtle box shadow on focus */
+    border-color: #4EA8DE;
+    box-shadow: 0 0 5px rgba(78, 168, 222, 0.5);
 }
 
 /* Styling for the open state */
 select:active,
 select.open {
-    border-color: #4EA8DE; /* Change the border color on open/active state */
-    box-shadow: 0 0 5px rgba(78, 168, 222, 0.5); /* Add a subtle box shadow on open/active state */
+    border-color: #4EA8DE; 
+    box-shadow: 0 0 5px rgba(78, 168, 222, 0.5); 
 }
 
 
@@ -214,22 +214,22 @@ select.open {
 /* Small devices (phones) */
 @media only screen and (max-width: 600px) {
     .list-content {
-        width: 90%; /* Adjust the width for small screens */
+        width: 90%; 
     }
     #priorityFilter,
     #prioritySelect {
-        width: 40%; /* Adjust the width for small screens */
+        width: 40%; 
     }
 }
 
 /* Medium devices (tablets) */
 @media only screen and (min-width: 601px) and (max-width: 768px) {
     .list-content {
-        width: 80%; /* Adjust the width for medium screens */
+        width: 80%;
     }
     #priorityFilter,
     #prioritySelect {
-        width: 60%; /* Adjust the width for medium screens */
+        width: 60%; 
     }
 }
 
